@@ -1,0 +1,10 @@
+sudo apt install rclone
+rclone config
+n
+13
+
+
+mkdir my_main_folder
+chmod 775 my_main_folder
+rclone mount test:my_main_folder
+df -h

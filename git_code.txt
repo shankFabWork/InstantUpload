@@ -1,0 +1,16 @@
+git init & git add . && git commit -m "dssdfs"
+git remote add origin https://github.com/shankFabWork/InstantUpload.git
+
+# If you want to get only latest branch
+# 1) Checkout
+git checkout --orphan latest_branch
+# 2) Add all the files
+git add -A
+# 3) Commit the changes
+git commit -am "$( date +"%d-%m-%Y_%I:%M:%S %P" )"
+# 4) Delete the branch
+git branch -D main
+# 5) Rename the current branch to main
+git branch -m main
+# 6) Finally, force update your repository
+git push -f origin main
